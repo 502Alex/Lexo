@@ -1,7 +1,7 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const pool = require('../database');
-const helpers = require('..lib/helpers');
+const helpers = require('../lib/helpers');
 
 passport.use('local.signin', new LocalStrategy({
 usernameField: 'Nombre_Usuario',
@@ -47,7 +47,7 @@ passport.use('local.singup', new LocalStrategy({
     Correo_electronico
    };
    try{
-       newUser.Usuario_contraseña = await helpers.encryptPassword(newUse.Usuario_contraseña);
+       newUser.Usuario_contraseña = await helpers.eencryptPasword(newUse.Usuario_contraseña);
         const result = await pool.query('INSERT INTO users(vendedores)  SET ?',[newUser]); 
         return done(null,newUser);
     }

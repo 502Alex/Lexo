@@ -37,9 +37,9 @@ store: new MySQLStore(database)
 app.use(flash());//mensajes de eeror 
 app.use(morgan('dev'));//resivir en consola 
 app.use(express.urlencoded({extended:false}));//utiliza expres
-app.use(expres.json());//paquetees .js
+app.use(express.json());//paquetees .js
 app.use(passport.initialize());//inicia paspotr
-app.use(passpot.session());
+app.use(passport.session());
 
 //variables globales
 app.use((req,res, next)=>{
