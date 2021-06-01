@@ -11,7 +11,7 @@ const {database} = require('./keys');
 const app = express();
 require('./lib/passport');
 //configuracion de puerto
-app.set('port',process.PORT || 4000);
+app.set('port',process.PORT || 5000);
 //se toma direccion actual para jalar carpeta de vistas
 app.set('views',path.join(__dirname,'views'));
 //motor de visitas handle
@@ -53,7 +53,7 @@ app.use((req,res, next)=>{
 
 app.use(require('./routes'));
 app.use(require('./routes/authentication'));
-app.use('principal', require('./routes/principal'));
+app.use('/principal', require('./routes/principal'));
 //archivos publicos
 app.use(express.static(path.join(__dirname, 'public')));
 //iniciar el server

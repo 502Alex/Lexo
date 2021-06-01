@@ -1,0 +1,31 @@
+<div class="modal-dialog text-center">
+        <div class="col-sm-8 main-section">
+            <div class="modal-content">
+                
+                <form class="col-12" th:action="@{/login}" method="get">
+                    <div class="form-groupo" id="nombree-groupo">
+                        <input type="text" name="nombre_com" class="form-control" placeholder="Nombre completo " name="nombree-groupo"/>
+                    </div>
+                    <div class="form-groupo" id="email-groupo">
+                        <input type="text" name="email" class="form-control" placeholder="Email" name="email"/>
+                    </div>
+                    <div class="form-groupo" id="residencia-groupo">
+                        <input type="text" name="Residencia" class="form-control" placeholder="Residencia" name="residencia"/>
+                    </div>
+                     <div class="form-groupo" id="telefono-groupo">
+                        <input type="num" name="Telefono" class="form-control" placeholder="Telefono" name="telefono"/>
+                    </div>
+                   
+                    <div class="form-groupo" id="contrasena-groupo">
+                        <input type="num" name="contraseña" class="form-control" placeholder="Contraseña" name="password"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Ingresar </button>
+                </form>
+                <div th:if="${param.error}" class="alert alert-danger" role="alert">
+		            Nombre de Usuario y/o Contraseña Inválidos.
+		        </div>
+		      
+               
+            </div>
+        </div>
+    </div>

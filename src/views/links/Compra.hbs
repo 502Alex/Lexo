@@ -1,0 +1,63 @@
+
+   
+    <div class="modal-dialog text-center">
+        <div class="col-sm-100 main-section">
+            <div class="modal-content">
+              
+     
+
+     </a>
+                  
+                
+                <form class="col-12" th:action="@{/login}" method="get">
+                    <a >Informacion del Cliente</a>
+                    <div class="form-groupos" id="nombre-groupos">
+                        <input type="tex" name="nombre_cliente" class="form-control" placeholder="Nombre del Clienete " name="nombre"/>
+                    </div>
+                    <div class="form-groupos" id="nit-groupos">
+                        <input type="num" name="nit" class="form-control" placeholder="Nit" name="nit"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>  Aceptar </button>
+                    <a >Datos de Compra</a>
+                    <div class="form-groupos" id="codigo-groupos">
+                        <input type="num" name="codigo_prod" class="form-control" placeholder="Codigo de Producto " name="Codigo"/>
+                    </div>
+                    <div class="form-groupos" id="cantidad-groupos">
+                        <input type="num" name="cantidad_prod" class="form-control" placeholder="Cantidad de Producto" name="cantidad"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-shopping-bag"></i>  Aceptar </button>
+                    
+                 <a >Vista de Productos Comprados</a>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Codigo</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Descuennto</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Eliminar</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                         
+                          <tr>
+                            <th scope="row">1</th>
+                            <td colspan="1">Camarra</td>
+                            <td>2</td>
+                            <td>Q125</td>
+                            <td>10 c/u </td>
+                            <td> <a class="btn btn-warning btn-sm"  role="button">Editar</a></td>
+                            <td><a class="btn btn-danger btn-sm"  role="button">Eliminar</a></td>
+                
+                          </tr>
+                    </tbody>
+                  </table>
+                 
+                </form>
+               
+            </div>
+        </div>
+    </div>

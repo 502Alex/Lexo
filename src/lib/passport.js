@@ -49,6 +49,7 @@ passport.use('local.singup', new LocalStrategy({
    try{
        newUser.Usuario_contraseña = await helpers.eencryptPasword(newUse.Usuario_contraseña);
         const result = await pool.query('INSERT INTO users(vendedores)  SET ?',[newUser]); 
+        newUser.ID = result.insertid;// 
         return done(null,newUser);
     }
    catch(e){

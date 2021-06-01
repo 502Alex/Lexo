@@ -1,0 +1,28 @@
+<div class="modal-dialog text-center">
+        <div class="col-sm-8 main-section">
+            <div class="modal-content">
+                <a >Nuevo Producto</a>
+                <form class="col-12" th:action="@{/login}" method="get">
+                    <div class="form-groupo" id="nombreprod-groupo">
+                        <input type="text" name="nombre" class="form-control" placeholder="Nombre del producto " name="nombreprod"/>
+                    </div>
+                     <div class="form-groupo" id="existenprod-groupo">
+                        <input type="text" name="Existencia" class="form-control" placeholder="Existencia de producto " name="nombreprod"/>
+                    </div>
+                    <div class="form-groupo" id="codigo-groupo">
+                        <input type="num"  name="tipo" class="form-control" placeholder="Ingrese codigo" name="codigo"/>
+                    </div>
+                    <div class="form-groupo" id="precio-groupo">
+                        <input type="num" name=" Precio_costo" class="form-control" placeholder="Precio de costo" name="precio"/>
+                    </div>
+
+                    <div class="form-groupo" id="preciomer-groupo">
+                        <input type="num" name="Precio" class="form-control" placeholder="Precio de Venta" name="preciomer"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-paste"></i> Ingresar </button>
+                
+		      
+               
+            </div>
+        </div>
+    </div>
